@@ -1,6 +1,8 @@
 // vite.config.ts
 import build from '@hono/vite-build/cloudflare-pages'
+import adapter from '@hono/vite-dev-server/cloudflare'
 import honox from 'honox/vite'
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig(({ mode }) => {
@@ -23,7 +25,16 @@ export default defineConfig(({ mode }) => {
       ssr: {
         external: ['react', 'react-dom'],
       },
-      plugins: [honox(), build()],
+      plugins: [
+        honox(
+          {
+            devServer: { adapter },
+            client: { input: ['./app/style.css'] }
+          }
+        ),
+        tailwindcss(),
+        build()
+      ],
     }
   }
 })
