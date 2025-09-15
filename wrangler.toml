@@ -1,0 +1,12 @@
+# 告诉 Pages 项目的构建输出目录
+pages_build_output_dir = "dist"
+name = "honox-react-ssr"
+compatibility_date = "2025-09-15"
+compatibility_flags = ["nodejs_compat"]
+
+# D1 数据库绑定
+# 注意 [[...]] 语法，它表示这是一个数组（array of tables）
+[[d1_databases]]
+binding = "DB"
+database_name = "archive"
+database_id = "f05bcc9e-52ab-485c-a3a0-87f2a472a7c1"
