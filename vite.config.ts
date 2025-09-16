@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => {
             assetFileNames: 'static/assets/[name].[ext]',
           },
         },
+        manifest: true,
         emptyOutDir: false,
       },
     }
