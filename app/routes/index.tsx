@@ -4,7 +4,7 @@ import Counter from '../islands/counter'
 export default createRoute(async (c) => {
   const name = c.req.query('name') ?? 'Hono'
   const { results } = await c.env.DB.prepare(
-      "SELECT * FROM users"
+      "SELECT * FROM article"
     ).all();
   
   return c.render(
