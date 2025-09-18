@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "@hono/react-renderer": "^1.0.1",
+    "@tanstack/react-query": "^5.89.0",
     "date-fns": "^4.1.0",
     "hono": "^4.9.7",
     "honox": "^0.1.46",

@@ -1,7 +1,11 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 export default function Counter() {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    
+  }, [])
   return (
     <div>
       <p className="py-2 text-2xl">{count}</p>
